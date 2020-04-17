@@ -24,7 +24,7 @@ steps:
   displayName: Make Virtualenv
 
 - script: |
-    $(PY_EXE) -m pip install -e . --upgrade
+    $(PY_EXE) -m pip install --upgrade --editable .
     $(PY_EXE) -m pipenv install --deploy --dev --python="$(PY_EXE)"
   displayName: Upgrade Pip & Install Pipenv
   env:
